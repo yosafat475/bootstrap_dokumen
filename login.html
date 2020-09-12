@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="asset1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset1/css/all.css">
+    <link rel="shortcut icon" href="asset1/image/unity-editor-icon-icon.png" type="image/x-icon">
+    <style>
+        #vector{
+        background-image:url(asset1/image/prakerja.png);
+        background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-4" id="sidebar">
+                <!-- logo -->
+                <di class="d-flex flex-column bd-highlight mb-3">
+                    <img class="mt-5" style="width: 160px; height: 51px;" src="asset1/image/prakerja2.png" alt="">
+                </di>
+                <!-- login info -->
+                <div class="d-flex flex-column pt-6">
+                    <h5>login</h5>
+                    <p class="lead">bagi kamu yang sudah terdaftar,silahkan login</p>
+                </div>
+                <!-- login from -->
+                <div class="d-flex flex-column shadow p-3 mb-0 bg-white rounded">
+                    <form>
+                        <div>
+                            <small>E-mail</small>
+                        </div>
+                            <input class="border-0 button_click" type="text" placeholder="alamat@gmail.com">
+                            <i class="position-relative fas fa-lock ml-n4"></i>
+                        <div>
+                            <small>pasword</small>
+                        </div>
+                        <input id="buka" class="border-0 button_click" type="password"placeholder="Masukkan pasword">                       
+                        <i id="tutup" class="position-relative far fa-eye ml-n4">
+                        </i>
+                    </form>
+                    <script>
+                        const togglepassword = document.querySelector('#tutup');
+                        const password = document.querySelector('#buka');
+    
+                        togglepassword.addEventListener('click',function (e){
+                            // toggle type attribute
+                            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+                            password.setAttribute('type',type);
+                            // toggle type eye slash icon
+                            this.classList.toggle('fa-eye-slash');
+                        });
+                    </script>
+                </div>
+                <!-- login_additional -->
+                <div class="d-flex flex-row justify-content-between mb-5">
+                    <form><input type="checkbox"><small class="ml-2">Remember me?</small></form>
+                    <div>
+                        <a href="#"> lupa sandi?</a>
+                    </div>
+                </div>
+                
+                <!-- register -->
+                <div class="d-flex flex-row">
+                    <button type="button" class="btn btn-primary mr-3" data-toggle="button" aria-pressed="false">Login</button>
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">Register</button>
+                </div>
+                <!-- footer -->
+                <div class="d-flex flex-row">
+                    Copyright &copy;2020
+                </div>
+            </div>          
+            <div class="col-8 vh-100 border" id="vector">
+                <!-- <img class="bg-primary" src="asset1/image/prakerja.png" alt=""></div> -->
+            </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Disuruh login malah ngeyel</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <di class="d-flex flex-column bd-highlight mb-3">
+                <img class="mt-5" style="width: 160px; height: 51px;" src="asset1/image/prakerja2.png" alt="">
+            </di>
+            <!-- login info -->
+            <div class="d-flex flex-column pt-6">
+                <h5>login</h5>
+                <p class="lead">bagi kamu yang sudah terdaftar,silahkan login</p>
+            </div>
+            <!-- login from -->
+            <div class="d-flex flex-column">
+                <form>
+                    <div>
+                        <small>Email</small>
+                    </div>
+                    <input type="text" placeholder="alamat@gmail.com">
+                    <div>
+                        <small>pasword</small>
+                    </div>
+                    <input type="password" id="buka" placeholder="Masukkan pasword">                       
+                    <i class="position-relative far fa-eye ml-n4"id="tutup" ></i>
+                </form>
+            </div>
+            <!-- login_additional -->
+            <div class="d-flex flex-row justify-content-between">
+                <form><input type="checkbox"><small class="ml-2">jangan lupa login</small></form>
+                <div>
+                    <a href="#"> lupa sandi?</a>
+                </div>
+            </div>
+            
+            <!-- register -->
+            <div class="d-flex flex-row">
+                <button type="button" class="btn btn-primary mr-3" data-toggle="button" aria-pressed="false">Login</button>
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ga2">Register</button>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div> 
+
+ 
+        
+        
+        
+  <script src="asset1/css/js/jquery-full.min.js"></script>
+  <script src="asset1/css/js/popper.min.js"></script>
+  <script src="asset1/css/js/bootstrap.min.js"></script>
+
+<script>
+    $(".button_click").click(function(el){
+        // alert("tes")
+        console.log(this.parentNode.parentNode);
+        root_l=this.parentNode.parentNode;
+        root_l=style="border-left:2px solid red !important;";
+    });
+</script>
+
+
+
+    </body>
+    </html>
